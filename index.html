@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore curiosidades, versículos e hinos da Bíblia.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <title>Biblicamente falando</title>
+ </head>
+ <body>
+    <header class="header">
+        <h1>Explorando a Bíblia</h1>
+        <div class="search-container">
+            <input type="text" id="buscaInput" placeholder="Buscar por nome, descrição, referência...">
+            <button id="buscaBotao">Procurar</button>
+            <button id="limparBuscaBotao" class="secondary-button" title="Limpar busca">Limpar</button>
+        </div>
+    </header>
+
+    <div class="daily-content-wrapper">
+        <section id="curiosidade-do-dia" class="daily-verse-container">
+            <h2>Curiosidade do Dia</h2>
+            <p id="curiosidade-texto"></p>
+            <p id="curiosidade-referencia"></p>
+        </section>
+
+        <section id="versiculo-do-dia" class="daily-verse-container">
+            <h2>Versículo do Dia</h2>
+            <p id="versiculo-texto"></p>
+            <p id="versiculo-referencia"></p>
+        </section>
+
+        <section id="harpa-crista" class="harpa-container">
+            <h2>Hino da Harpa Cristã</h2>
+            <p id="hino-titulo"></p>
+            <blockquote id="hino-letra"></blockquote>
+        </section>
+    </div>
+    <div class="controls-container">
+        <span>Ordenar por:</span>
+        <button id="ordenarNomeBotao">Nome (A-Z)</button>
+        <button id="ordenarReferenciaBotao">Referência Bíblica</button>
+        <div class="filter-container">
+            <span>Filtrar por Livro:</span>
+            <select id="filtroLivroSelect">
+                <option value="todos">Todos os Livros</option>
+            </select>
+        </div>
+    </div>
+
+    <main>
+        <section class="card-conteiner">
+            <!-- Os cartões serão inseridos aqui pelo JavaScript -->
+        </section>
+        <div id="pagination-container" class="pagination-container">
+            <!-- Botões de paginação serão inseridos aqui -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <ul>
+            <li>
+                <a href="https://www.letras.mus.br/harpa-crista/" target="_blank" rel="noopener noreferrer">Harpa Cristã Online</a>
+            </li>
+            <li>
+                <a href="https://www.bibliaonline.com.br/" target="_blank" rel="noopener noreferrer">Bíblia Online</a>
+            </li>
+            <li>
+                <a href="https://www.gotquestions.org/Portugues/" target="_blank" rel="noopener noreferrer">Got Questions?</a>
+            </li>
+            <li>
+                <a href="https://www.alura.com.br/" target="_blank" rel="noopener noreferrer">Alura</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script.js" defer></script>
+ </body>
+ </html>

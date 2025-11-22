@@ -1,0 +1,252 @@
+/* Importa a fonte 'EB Garamond' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'EB Garamond', serif; /* Define uma fonte serifada clássica */
+    margin: 0; /* Remove a margem padrão do corpo */
+    background-color: #fdf6e3; /* Fundo cor de pergaminho claro */
+    color: #584b33; /* Cor de texto marrom escuro */
+}
+
+.header {
+    background-color: #c8bda4; /* Fundo sépia/bege para o cabeçalho */
+    color: #4a3f2a; /* Cor de texto escura para o cabeçalho */
+    padding: 20px 40px; /* Adiciona preenchimento interno */
+    display: flex; /* Usa Flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaça o título e a busca */
+    align-items: center; /* Centraliza os itens verticalmente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.header h1 {
+    margin: 0; /* Remove a margem do título */
+    font-weight: 600; /* Deixa a fonte do título mais forte */
+}
+
+.search-container {
+    display: flex; /* Usa Flexbox para alinhar o input e o botão */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.search-container input {
+    padding: 10px 15px; /* Aumenta o preenchimento interno */
+    width: 300px; /* Define a largura do campo */
+    border: 1px solid #a18f6a; /* Borda em tom de marrom */
+    border-radius: 20px 0 0 20px; /* Arredonda os cantos esquerdos */
+    outline: none; /* Remove a borda de foco padrão */
+    transition: border-color 0.3s; /* Efeito de transição suave para a borda */
+    background-color: #f5ead6; /* Fundo pergaminho mais claro */
+    color: #584b33; /* Cor do texto */
+}
+
+.search-container input:focus {
+    border-color: #8a754a; /* Muda a cor da borda ao focar */
+}
+
+.search-container button {
+    padding: 10px 20px; /* Aumenta o preenchimento do botão */
+    background-color: #8a754a; /* Cor de fundo dourado/marrom */
+    color: #fdf6e3; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 0 20px 20px 0; /* Arredonda os cantos direitos */
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" ao passar sobre o botão */
+    transition: background-color 0.3s; /* Efeito de transição suave para a cor de fundo */
+}
+
+.search-container button:hover {
+    background-color: #6d5d3b; /* Escurece o botão ao passar o mouse */
+}
+
+.search-container .secondary-button {
+    background-color: #4b5563;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.search-container .secondary-button:hover {
+    background-color: #6b7280;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 40px;
+    background-color: #f5ead6;
+    border-bottom: 1px solid #e0d5b9;
+}
+
+.controls-container button {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #6d5d3b;
+    border: 1px solid #c8bda4;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.controls-container button:hover {
+    background-color: #c8bda4;
+    color: #4a3f2a;
+}
+
+.daily-content-wrapper {
+    display: flex;
+    gap: 20px; /* Espaçamento entre as duas seções */
+    padding: 20px 40px;
+}
+
+.daily-verse-container {
+    background-color: #f5ead6; /* Fundo mais claro para destaque */
+    border: 1px solid #e0d5b9;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0; /* Remove a margem anterior */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Faz com que cada seção ocupe metade do espaço */
+}
+
+.daily-verse-container h2 {
+    color: #6d5d3b;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.daily-verse-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.harpa-container {
+    background-color: #f5ead6;
+    border: 1px solid #e0d5b9;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0; /* Remove a margem anterior */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Faz com que cada seção ocupe metade do espaço */
+}
+
+.harpa-container h2 {
+    color: #6d5d3b;
+    margin-top: 0;
+}
+
+.harpa-container #hino-titulo {
+    font-weight: 600;
+    color: #584b33;
+    margin-bottom: 15px;
+}
+
+main {
+    padding: 40px; /* Aumenta o preenchimento da área de conteúdo principal */
+    min-height: calc(100vh - 450px); /* Ajusta a altura mínima para acomodar as novas seções */
+}
+
+.card-conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cria um grid responsivo */
+    gap: 25px; /* Espaçamento entre os cartões */
+}
+
+.card {
+    background-color: #fffcf2; /* Fundo branco-pergaminho para o card */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 25px; /* Preenchimento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de "elevar" o card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada no hover */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #6d5d3b;
+}
+
+.card p {
+    flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
+    color: #584b33;
+}
+
+.card a {
+    background-color: #8a754a;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px; /* Espaço acima do botão */
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #6d5d3b;
+}
+
+.card-aviso {
+    color: #9ca3af;
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1; /* Faz a mensagem ocupar todas as colunas do grid */
+}
+
+.spinner {
+    border: 5px solid #d1c7ac;
+    border-top: 5px solid #8a754a;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.footer {
+    background-color: #c8bda4; /* Usa a mesma cor do cabeçalho */
+    color: #4a3f2a; /* Define a cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+    padding: 20px 0; /* Aumenta o preenchimento do rodapé */
+    width: 100%; /* Faz o rodapé ocupar 100% da largura */
+}
+
+.footer ul {
+    list-style: none; /* Remove os marcadores (bolinhas) da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+}
+
+.footer li {
+    display: inline-block; /* Exibe os itens da lista na mesma linha, permitindo margens verticais */
+    margin: 0 20px; /* Adiciona margem horizontal entre os itens da lista */
+}
+
+.footer a {
+    color: #4a3f2a; /* Define a cor dos links no rodapé */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    transition: color 0.3s; /* Efeito de transição suave para a cor do link */
+}
+
+.footer a:hover {
+    color: #000; /* Muda a cor do link ao passar o mouse */
+}
+
+/* Media Query para responsividade */
+@media (max-width: 768px) {
+    .daily-content-wrapper {
+        flex-direction: column; /* Empilha as seções em telas menores */
+    }
+}
